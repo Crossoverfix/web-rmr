@@ -1,0 +1,28 @@
+.icon{
+  &__logo{
+    background-image: url("/assets/icon/Logo.svg");
+  }
+  &__gog{
+    background-image: url("/assets/icon/gog.svg");
+  }
+  &__home{
+    background-image: url("/assets/icon/home.svg");
+  }
+  &__mail{
+    background-image: url("/assets/icon/mail.svg");
+  }
+  &__bank{
+    background-image: url("/assets/icon/bank.svg");
+  }
+  &__box{
+    background-image: url("/assets/icon/box.svg");
+  }
+  &__rating{
+    background-image: url("/assets/icon/rating.svg");
+  }
+  &__chat{background-image: url("/assets/icon/chat.svg");}
+  &__calendar{background-image: url("/assets/icon/Сalendar.svg");}
+  &__group{background-image: url("/assets/icon/group.svg");}
+  &__search-add{background-image: url("/assets/icon/search-add.svg");}
+  &__search-gog{background-image: url("/assets/icon/search-gog.svg");}
+}

@@ -1,0 +1,17 @@
+@import "var";
+@import "mixin";
+@import "icon";
+@import "font";
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: "Golos text";
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+@import "media";
+@import "option";
