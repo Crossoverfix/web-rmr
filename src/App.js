@@ -3,6 +3,19 @@ import './App.scss';
 
 
 function App() {
+    function test (){
+        let $ = document;
+        let cssId = 'myCss';
+        let head  = $.getElementsByTagName('head')[0];
+        let link  = $.createElement('link');
+        link.id   = cssId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../src/assets/style/dark-theme.scss';
+        link.media = 'all';
+        head.appendChild(link);
+
+    }
     return (
         <div className="App">
             <div className="gs-header">
@@ -44,7 +57,7 @@ function App() {
                     <span className="gs-frame__side-bar__tab__text">Рейтинг</span>
                 </div>
             </div>
-            <div className="gs-frame__side-bar__footer">
+            <div className="gs-frame__side-bar__footer" onClick={test}>
                 <button className="gs-theme-switch">
                   <div className="gs-theme-switch__icon"></div>
                 </button>
@@ -78,7 +91,7 @@ function App() {
                         <div className="gs-frame__grid__widget__content__card__counters">
                             <div className="gs-frame__grid__widget__content__card__counters__count">
                                 <span
-                                    className="gs-frame__grid__widget__content__card__counters__count__number">19</span>
+                                    className="gs-frame__grid__widget__content__card__counters__count__number">+19</span>
                                 <span
                                     className="gs-frame__grid__widget__content__card__counters__count__text">новых</span>
                             </div>
@@ -108,7 +121,7 @@ function App() {
                         <div className="gs-frame__grid__widget__content__card__counters">
                             <div className="gs-frame__grid__widget__content__card__counters__count">
                                 <span
-                                    className="gs-frame__grid__widget__content__card__counters__count__number">19</span>
+                                    className="gs-frame__grid__widget__content__card__counters__count__number">+19</span>
                                 <span
                                     className="gs-frame__grid__widget__content__card__counters__count__text">новых</span>
                             </div>

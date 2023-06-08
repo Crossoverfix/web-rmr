@@ -431,23 +431,23 @@
                 margin-left: 5px;
                 padding: 0 16px;
                 border-radius: 0 0 0 8px;
-                background-color: var(--widget-card-counter-color);
+                //background-color: var(--widget-card-counter-color);
                 &__number{
                   display: inline-block;
-                  color: var(--widget-card-counter-text-color);
+                  color: var(--widget-title-color);
                   font-style: normal;
-                  font-weight: 400;
-                  font-size: 18px;
-                  line-height: 22px;
+                  font-weight: 500;
+                  font-size: 22px;
+                  line-height: 28px;
                   margin-right: 3px;
                 }
                 &__text{
                   display: inline-block;
-                  color: var(--widget-card-counter-text-color);
+                  color: var(--widget-title-color);
                   font-style: normal;
-                  font-weight: 400;
-                  font-size: 18px;
-                  line-height: 22px;
+                  font-weight: 500;
+                  font-size: 22px;
+                  line-height: 28px;
                 }
               }
             }
@@ -502,6 +502,7 @@
                   align-items: center;
                   justify-content: flex-start;
                   flex-wrap: nowrap;
+                  border: 1px solid var(--widget-card-other-counter-color);
                   border-radius: 8px;
                   height: 58px;
                   margin-top: 10px;
@@ -532,7 +533,8 @@
                     }
                   }
                   &.disable{
-                    background-color: var(--widget-card-other-counter-disable-color);
+                    background-color: transparent;
+                    border: 1px solid var(--main-border-color);
                     .gs-frame__grid__widget__content__card__info__other__counter{
                       &__text{
                         color: var(--widget-sub-title-color);
