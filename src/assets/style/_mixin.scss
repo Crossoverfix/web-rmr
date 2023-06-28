@@ -1,0 +1,16 @@
+@mixin inline-svg($url) {
+  background-image: url('data:image/svg+xml;utf8,' + $url +'');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@mixin clear-btn(){
+  border: none;
+  outline: none;
+  box-shadow: none;
+  &:focus,&:hover{
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}

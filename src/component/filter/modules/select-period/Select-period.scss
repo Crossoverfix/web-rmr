@@ -1,0 +1,52 @@
+.gs-select-period{
+  width: calc(100% + 12px);
+  position: relative;
+  left: -6px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  &__label{
+    width: calc(50% - 12px);
+    margin: 6px;
+    border-radius: 8px;
+    border: 1px solid var(--main-border-color, #DADCE2);
+    background: var(--filter-check-box-bg, #FDFDFD);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    height: 40px;
+    padding: 0 16px;
+    &__pre{
+      display: inline-block;
+      color: var(--filter-text-color, #393E47);
+      font-size: 16px;
+      line-height: 38px;
+      margin-right: 5px;
+    }
+    input{
+      color: var(--filter-text-color, #393E47);
+      font-size: 16px;
+      line-height: 38px;
+      height: 100%;
+      width: 100%;
+      flex-grow: 1;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+      &:focus,&:hover{
+        border: none;
+        background-color: transparent;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    .gs-icon{
+
+    }
+  }
+}

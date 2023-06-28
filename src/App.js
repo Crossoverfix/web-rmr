@@ -2,6 +2,7 @@ import './App.scss';
 import Grid from './Grid';
 import List from './List';
 import Search from './Search';
+import Filter from "./component/filter/Filter";
 
 
 function App() {
@@ -71,7 +72,8 @@ function App() {
         <Grid />
     </div>
 </div>
-</div>
+            <Filter></Filter>
+        </div>
 )
     ;
 }
