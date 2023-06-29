@@ -26,12 +26,12 @@ function SelectPeriod({data}){
             <label className='gs-select-period__label'>
                 <span className="gs-select-period__label__pre">с</span>
                 <input type="date" name={`${data.for}-date-start`} min={minDate} max={maxDate}/>
-                <div className='gs-icon'></div>
+                <div className='gs-icon icon__calendar'></div>
             </label>
             <label className='gs-select-period__label'>
                 <span className="gs-select-period__label__pre">до</span>
                 <input type="date" name={`${data.for}-date-end`} min={minDate} max={maxDate}/>
-                <div className='gs-icon'></div>
+                <div className='gs-icon icon__calendar'></div>
             </label>
         </div>
     );

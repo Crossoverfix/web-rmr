@@ -20,6 +20,7 @@
     flex-wrap: nowrap;
     height: 40px;
     padding: 0 16px;
+    position: relative;
     &__pre{
       display: inline-block;
       color: var(--filter-text-color, #393E47);
@@ -46,7 +47,16 @@
       }
     }
     .gs-icon{
-
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 34px;
+      background-size: 16px auto;
+      right: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      background-color: #FFFFFF;
     }
   }
 }
