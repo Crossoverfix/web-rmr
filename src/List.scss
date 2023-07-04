@@ -451,3 +451,115 @@
     }
   }
 }
+.gs-mui-select{
+  position: relative;
+  margin-right: 20px;
+  background: var(--filter-check-box-bg, #FDFDFD);
+  height: 40px;
+  &.MuiFormControl-root{
+    position: relative;
+    margin-right: 20px;
+    background: var(--filter-check-box-bg, #FDFDFD);
+    height: 40px;
+    min-width: 250px;
+  }
+  .gs-select-text{
+    color: var(--filter-text-color, #393E47);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .gs-icon{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .MuiOutlinedInput-notchedOutline{
+    display: none;
+  }
+  .MuiInputBase-root{
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--main-border-color, #DADCE2);
+    &.Mui-focused{
+      border: 1px solid var(--filter-check-box-checked, #4C98E3);
+    }
+  }
+  .MuiSelect-select{
+    padding: 0 12px;
+    line-height: 40px;
+    height: 100%;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      width: 16px;
+      height: 16px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icons"><path id="Icon" d="M12 10L8 6L4 10" stroke="%23393E47" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg> ');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &[aria-expanded="true"]{
+      &:before{
+        transform: translateY(-50%) rotate(0);
+      }
+    }
+  }
+  .MuiSvgIcon-root{
+    display: none;
+  }
+}
+.MuiModal-root{
+  .gs-select-text{
+    color: var(--filter-text-color, #393E47);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .gs-icon{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .MuiMenu-paper{
+    border-radius: 8px;
+    border: 1px solid var(--main-border-color, #DADCE2);
+    background: var(--filter-check-box-bg, #FDFDFD);
+    box-shadow: 0px 4px 6px 0px rgba(49, 76, 130, 0.06), 0px 2px 10px 0px rgba(49, 76, 130, 0.25);
+  }
+  .MuiList-root{
+    padding: 6px 0;
+  }
+  .MuiMenuItem-root{
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    padding-right: 44px;
+    &.Mui-selected{
+      background: var(--filter-select-selected, rgba(128, 202, 255, 0.20));
+      &:before{
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icons"><path id="Icon" d="M13.3337 4L6.00033 11.3333L2.66699 8" stroke="%234C98E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg> ');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

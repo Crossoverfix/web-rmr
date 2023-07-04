@@ -1,4 +1,5 @@
 import './List.scss';
+import {FormControl, MenuItem, Select} from "@mui/material";
 
 
 function List() {
@@ -27,6 +28,16 @@ function List() {
                         <div className="gs-content-control">
                             <div className="gs-content-control__filter">
                                 <div className="gs-content-control__filter__sort">
+                                    <FormControl className="gs-mui-select">
+                                        <Select
+                                            defaultValue={1}
+                                        >
+                                            <MenuItem value={1}><span className="gs-select-text">Сначала непрочитанные</span></MenuItem>
+                                            <MenuItem value={2}><span className="gs-select-text">Сначала прочитанные</span></MenuItem>
+                                            <MenuItem value={3}><div className="gs-icon icon__sort-up"></div><span className="gs-select-text">По дате поступления</span></MenuItem>
+                                            <MenuItem value={4}><div className="gs-icon icon__sort-down"></div><span className="gs-select-text">По дате поступления</span></MenuItem>
+                                        </Select>
+                                    </FormControl>
                                     <span className="gs-content-control__filter__sort__name">По сроку исполнения</span>
                                     <a href={testLink} className="gs-content-control__filter__sort__btn">
                                         <div className="btn-icon icon__arr-sort-up"></div>
