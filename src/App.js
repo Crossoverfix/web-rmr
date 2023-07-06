@@ -72,7 +72,7 @@ function App() {
         <Grid />
     </div>
 </div>
-            {/*<Filter></Filter>*/}
+            <Filter></Filter>
         </div>
 )
     ;
