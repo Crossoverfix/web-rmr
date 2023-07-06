@@ -22,6 +22,7 @@
         justify-content: flex-start;
         flex-wrap: nowrap;
         border: 1px solid var(--main-border-color);
+        background-color: var(--search-input-bg-color);
         padding-left: 64px;
         &:before{
           content: "";
