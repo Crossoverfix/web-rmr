@@ -2,6 +2,7 @@ import React from "react";
 import "./Filter.scss";
 import CheckBoxGroup from "./modules/check-box-group/Check-box-group";
 import RadioBoxGroup from "./modules/radio-box-group/Radio-box-group";
+import SearchBar from "./modules/search-bar/Search-bar";
 
 
 function Filter(){
@@ -38,6 +39,23 @@ function Filter(){
             addiction: true
         }
     };
+    const tagList = {
+        title: 'Выбрать отображение меток',
+        placeholder: 'Начните вводить название метки',
+        name: 'tagList',
+        list: [
+            {value:1,label:'Срочно'},
+            {value:1,label:'Важно'},
+            {value:1,label:'Законопроект'},
+            {value:1,label:'Проекты НПА'},
+            {value:1,label:'КС'},
+            {value:1,label:'Коронавирус'},
+            {value:1,label:'Указания Президента'},
+            {value:1,label:'Показатели'},
+            {value:1,label:'Госдума'},
+            {value:1,label:'Администрация Президента'},
+        ]
+    }
     return(
         <div className="gs-filter">
             <div className="gs-filter__wrap">
@@ -46,6 +64,14 @@ function Filter(){
                     <button className="gs-filter__header__close icon__close"></button>
                 </div>
                 <div className="gs-filter__body">
+                    <div className="gs-filter__body__col">
+                        <div className="gs-filter__block">
+                            <span className="gs-filter__block__title">Выбрать отображение меток</span>
+                            <div className="gs-filter__block__content">
+                                <SearchBar name={tagList.name} placeholder={tagList.placeholder}></SearchBar>
+                            </div>
+                        </div>
+                    </div>
                     <div className="gs-filter__body__col">
                         <div className="gs-filter__block">
                             <span className="gs-filter__block__title">Срок исполнения</span>
@@ -73,38 +99,6 @@ function Filter(){
                         </div>
                         <div className="gs-filter__block">
                             <span className="gs-filter__block__title">Краткое содержание</span>
-                            <div className="gs-filter__block__content">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="gs-filter__body__col">
-                        <div className="gs-filter__block">
-                            <span className="gs-filter__block__title">Вид документа</span>
-                            <div className="gs-filter__block__content">
-
-                            </div>
-                        </div>
-                        <div className="gs-filter__block">
-                            <span className="gs-filter__block__title">Номер поручения</span>
-                            <div className="gs-filter__block__content">
-
-                            </div>
-                        </div>
-                        <div className="gs-filter__block">
-                            <span className="gs-filter__block__title">Дата поручения</span>
-                            <div className="gs-filter__block__content">
-
-                            </div>
-                        </div>
-                        <div className="gs-filter__block">
-                            <span className="gs-filter__block__title">Подразделение исполнителя</span>
-                            <div className="gs-filter__block__content">
-
-                            </div>
-                        </div>
-                        <div className="gs-filter__block">
-                            <span className="gs-filter__block__title">Исполнитель документа</span>
                             <div className="gs-filter__block__content">
 
                             </div>
