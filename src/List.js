@@ -1,10 +1,28 @@
 import './List.scss';
 import {FormControl, MenuItem, Select} from "@mui/material";
+import ActiveFilter from "./component/active-filter/Active-filter";
 
 
 function List() {
     let testLink = "#"
     let testLink2 = "#"
+    const filterData = [
+        {type: 'ratio', name: 'Срок исполнения', value: 'Просрочено'},
+        {type: 'ratio', name: 'Период отображения', value: 'Последний месяц'},
+        {type: 'ratio', name: 'Контроль', value: 'На контроле'},
+        {type: 'ratio', name: 'Срочность', value: 'Срочно'},
+        {type: 'list', name: 'Вид документа', value: [
+                {id: 1, value: 'Доклад об исполнении поручений, указаний Президента'},
+                {id: 2, value: 'Заключение на проект ФЗ, ФКЗ'},
+                {id: 4, value: 'Номенклатура дел'}
+            ]}
+    ];
+    const tagTabList = [
+        {id: 11, value: 'Проекты НПА'},
+        {id: 12, value: 'КС'},
+        {id: 15, value: 'Указания Президента'},
+        {id: 16, value: 'Администрация Президента'}
+    ];
     return (
         <div className="gs-frame__list">
             <div className="gs-frame__list__header">
@@ -38,13 +56,9 @@ function List() {
                                             <MenuItem value={4}><div className="gs-icon icon__sort-down"></div><span className="gs-select-text">По дате поступления</span></MenuItem>
                                         </Select>
                                     </FormControl>
-                                    <span className="gs-content-control__filter__sort__name">По сроку исполнения</span>
-                                    <a href={testLink} className="gs-content-control__filter__sort__btn">
-                                        <div className="btn-icon icon__arr-sort-up"></div>
-                                        <div className="btn-icon icon__arr-sort-down"></div>
-                                    </a>
                                 </div>
                             </div>
+                            <ActiveFilter data={filterData}></ActiveFilter>
                             <div className="gs-content-control__action">
                                 <button className="gs-content-control__action__btn">
                                     <span>Выбрать документы</span>

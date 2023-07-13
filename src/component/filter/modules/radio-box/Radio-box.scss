@@ -15,9 +15,9 @@
   &__icon{
     display: inline-block;
     position: relative;
-    width: 18px;
-    height: 18px;
-    border-radius: 9px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
     border: 2px solid var(--filter-check-box-border, #C4C7D4);
     background: var(--filter-check-box-bg, #FDFDFD);
     margin-right: 10px;
@@ -27,8 +27,8 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%,-50%);
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
       border-radius: 50%;
     }
   }
