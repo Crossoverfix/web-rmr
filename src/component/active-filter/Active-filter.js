@@ -37,6 +37,7 @@ function ActiveFilter({data}){
         <div className="gs-ac-filter">
             <div className="gs-ac-filter__container">
                 {result}
+                <button className="gs-ac-filter__clear-btn icon__close"></button>
             </div>
             <div className="gs-ac-filter__select">
                 <FormControl className="gs-mui-select">

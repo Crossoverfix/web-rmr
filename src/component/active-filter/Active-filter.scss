@@ -4,7 +4,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  margin: 10px auto;
+  margin: 0 auto;
   padding: 0 15px;
   width: 100%;
   position: relative;
@@ -83,6 +83,24 @@
       &:hover{
         opacity: 0.6;
       }
+    }
+  }
+  &__clear-btn,&__clear-btn button{
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--main-border-color, #DADCE2);
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+    outline: none;
+    &.icon__close{
+      background-size: 24px auto;
+    }
+    &:focus{
+      outline: none;
+    }
+    &:hover{
+      border: 1px solid var(--gs-acent-color);
     }
   }
 }

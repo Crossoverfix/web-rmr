@@ -1,6 +1,7 @@
 import './List.scss';
 import {FormControl, MenuItem, Select} from "@mui/material";
 import ActiveFilter from "./component/active-filter/Active-filter";
+import TabsTag from "./component/tabs-tag/TabsTag";
 
 
 function List() {
@@ -65,6 +66,9 @@ function List() {
                                 </button>
                             </div>
                         </div>
+                    </div>
+                    <div className="gs-frame__list__header__control__tabs">
+                        <TabsTag data={tagTabList}></TabsTag>
                     </div>
                 </div>
             </div>

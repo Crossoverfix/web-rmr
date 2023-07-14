@@ -1,0 +1,41 @@
+.gs-tabs-mark{
+  width: 100%;
+  position: relative;
+  height: 48px;
+  border-bottom: 1px solid #F1F2F3;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  &__item{
+    display: inline-block;
+    height: 100%;
+    margin-right: 8px;
+    padding: 0;
+    cursor: pointer;
+    &:hover{
+      .gs-tabs-mark__item__text{
+        border-bottom: 3px solid var(--main-border-color);
+      }
+    }
+    &__text{
+      color: var(--gs-text-light, #8E9195);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 45px;
+      vertical-align: middle;
+      display: inline-block;
+      padding: 0 16px;
+      border-bottom: 3px solid transparent;
+    }
+    input{
+      display: none;
+      &:checked ~ .gs-tabs-mark__item__text{
+        border-bottom: 3px solid var(--gs-text-def, #393E47);
+        color: var(--gs-text-def, #393E47);
+      }
+    }
+  }
+}
