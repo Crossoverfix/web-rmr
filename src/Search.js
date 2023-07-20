@@ -1,4 +1,4 @@
-import './List.scss';
+import './Search.scss';
 
 
 function Search() {

@@ -3,6 +3,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  &--mask{
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,' + $url +'');
+  }
 }
 @mixin clear-btn(){
   border: none;
