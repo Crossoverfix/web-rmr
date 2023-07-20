@@ -40,23 +40,23 @@ function App() {
             </div>
             <div className="gs-frame__side-bar__nav">
                 <div className="gs-frame__side-bar__tab active">
-                    <div className="gs-frame__side-bar__tab__icon icon__home"></div>
+                    <div className="gs-frame__side-bar__tab__icon icon__home--mask"></div>
                     <span className="gs-frame__side-bar__tab__text">Моя страница</span>
                 </div>
                 <div className="gs-frame__side-bar__tab">
-                    <div className="gs-frame__side-bar__tab__icon icon__mail"></div>
+                    <div className="gs-frame__side-bar__tab__icon icon__mail--mask"></div>
                     <span className="gs-frame__side-bar__tab__text">Почта</span>
                 </div>
                 <div className="gs-frame__side-bar__tab">
-                    <div className="gs-frame__side-bar__tab__icon icon__bank"></div>
+                    <div className="gs-frame__side-bar__tab__icon icon__bank--mask"></div>
                     <span className="gs-frame__side-bar__tab__text">Мониторинг</span>
                 </div>
                 <div className="gs-frame__side-bar__tab">
-                    <div className="gs-frame__side-bar__tab__icon icon__box"></div>
+                    <div className="gs-frame__side-bar__tab__icon icon__box--mask"></div>
                     <span className="gs-frame__side-bar__tab__text">Проекты</span>
                 </div>
                 <div className="gs-frame__side-bar__tab">
-                    <div className="gs-frame__side-bar__tab__icon icon__rating"></div>
+                    <div className="gs-frame__side-bar__tab__icon icon__rating--mask"></div>
                     <span className="gs-frame__side-bar__tab__text">Рейтинг</span>
                 </div>
             </div>
