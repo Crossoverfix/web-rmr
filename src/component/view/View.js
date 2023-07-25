@@ -1,8 +1,25 @@
-import './View.scss'
-import React from "react";;
+import './View.scss';
+import React from "react";
+import {Button, Menu, MenuItem } from "@mui/material";
+
 
 function View({data}){
     console.log(data);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    let contentRef = React.createRef();
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = (val) => {
+        if(val){
+            console.log(val);
+        }
+        setAnchorEl(null);
+    };
+    const toggleShow = (ref) => {
+        ref.current.classList.toggle('show');
+    }
 
     return(
         <div className="gs-view">
@@ -53,10 +70,43 @@ function View({data}){
                 <div className="gs-view__form__block">
                     <div className="gs-view__form__block__header">
                         <span className="gs-view__form__block__header__title">Ознакомление</span>
-                        <div className="gs-view__form__block__header__toggler icon__pages-p"></div>
-                        <div className="gs-view__form__block__header__option-bar"></div>
+                        <div className="gs-view__form__block__header__toggler icon__pages-p" onClick={() => toggleShow(contentRef)}></div>
+                        <div className="gs-view__form__block__header__option-bar">
+                            <div className="gs-view__form__block__header__option-bar__drop-option">
+                                <Button
+                                    className="gs-drop-option-btn"
+                                    aria-controls={open ? '.gs-drop-option-menu' : undefined}
+                                    aria-haspopup="true"
+                                    aria-expanded={open ? 'true' : undefined}
+                                    onClick={handleClick}
+                                >
+                                    <div className="gs-icon icon__drop-option"></div>
+                                </Button>
+                                <Menu
+                                    className="gs-drop-option-menu"
+                                    anchorEl={anchorEl}
+                                    open={open}
+                                    onClose={() => handleClose(0)}
+                                    MenuListProps={{
+                                        'aria-labelledby': '.gs-drop-option-btn',
+                                    }}
+                                >
+                                    <MenuItem onClick={() => handleClose(1)}>Переговорить</MenuItem>
+                                    <MenuItem onClick={() => handleClose(2)}>Вернуть в секретариат</MenuItem>
+                                    <MenuItem onClick={() => handleClose(3)}>На ознакомление по списку</MenuItem>
+                                </Menu>
+                            </div>
+                        </div>
                     </div>
-                    <div className="gs-view__form__block__content"></div>
+                    <div ref={contentRef} className="gs-view__form__block__content show">
+                        <button className="gs-view__form__btn btn-accept">
+                            <span>Ознакомлен</span>
+                        </button>
+                        <button className="gs-view__form__btn btn-ghost">
+                            <div className="gs-icon icon__search-add--mask"></div>
+                            <span>Создать поручение</span>
+                        </button>
+                    </div>
                 </div>
                 <div className="gs-view__form__block">
                     <div className="gs-view__form__block__header">

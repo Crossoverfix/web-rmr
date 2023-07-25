@@ -7,7 +7,7 @@
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,' + $url +'');
+    -webkit-mask-image: url('data:image/svg+xml;utf8,' + $url + '');
   }
 }
 @mixin clear-btn(){
