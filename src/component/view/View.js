@@ -1,6 +1,7 @@
 import './View.scss';
 import React from "react";
 import {Button, Menu, MenuItem } from "@mui/material";
+import BlockWrap from "./components/blockWrap";
 
 
 function View({data}){

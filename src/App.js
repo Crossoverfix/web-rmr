@@ -67,9 +67,206 @@ function App() {
             </div>
 </div>
     <div className="gs-frame__content">
-        <List />
-        <Search />
-        <Grid />
+        <div className="gs-test-btn">
+            <button className="gs-btn">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-def">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-def btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-def btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-accept">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-accept btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-accept btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-reject">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-reject btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-reject btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-def">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-def btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-def btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-accept">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-accept btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-accept btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-reject">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-reject btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button className="gs-btn btn-ghost btn-reject btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+
+            <button disabled className="gs-btn">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-def">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-def btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-def btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-accept">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-accept btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-accept btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-reject">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-reject btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-reject btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-def">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-def btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-def btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-accept">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-accept btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-accept btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-reject">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-reject btn-icon">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+            <button disabled className="gs-btn btn-ghost btn-reject btn-text">
+                <span className="gs-btn__icon icon__search-add--mask"></span>
+                <span className="gs-btn__text">Кнопка</span>
+            </button>
+
+
+        </div>
+        {/*<List />*/}
+        {/*<Search />*/}
+        {/*<Grid />*/}
     </div>
 </div>
             {/*<Filter></Filter>*/}

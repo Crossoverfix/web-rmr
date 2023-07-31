@@ -1,0 +1,135 @@
+.gs-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 48px;
+  padding: 0 24px 0 12px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid var(--main-border-color);
+  background-color: var(--gs-object-bg);
+  border-radius: 8px;
+  &__icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-color: var(--gs-text-def);
+  }
+  &__text{
+    color: var(--gs-text-def);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  &:hover{
+    background-color: var(--gs-btn-hover-color);
+  }
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+  span{
+    flex-shrink: 0;
+    display: inline-block;
+  }
+  &.btn-icon{
+    padding: 0 12px;
+    .gs-btn__text{
+      display: none;
+    }
+    .gs-btn__icon{
+      margin-right: 0;
+    }
+  }
+  &.btn-text{
+    padding: 0 24px;
+    .gs-btn__icon{
+      display: none;
+    }
+  }
+  &.btn-def{
+    border: 1px solid var(--gs-acent-color);
+    background-color: var(--gs-acent-color);
+    .gs-btn__text{
+      color: var(--gs-text-contrast);
+    }
+    .gs-btn__icon{
+      background-color: var(--gs-text-contrast);
+    }
+    &:hover{
+      background-color: var(--gs-acent-hover-color);
+    }
+    &.btn-ghost{
+      background-color: var(--gs-object-bg);
+      .gs-btn__text{
+        color: var(--gs-acent-color);
+      }
+      .gs-btn__icon{
+        background-color: var(--gs-acent-color);
+      }
+      &:hover{
+        background-color: var(--gs-acent-ghost-color);
+      }
+    }
+  }
+  &.btn-accept{
+    border: 1px solid var(--gs-green-color);
+    background-color: var(--gs-green-color);
+    .gs-btn__text{
+      color: var(--gs-text-contrast);
+    }
+    .gs-btn__icon{
+      background-color: var(--gs-text-contrast);
+    }
+    &:hover{
+      background-color: var(--gs-green-hover-color);
+    }
+    &.btn-ghost{
+      background-color: var(--gs-object-bg);
+      .gs-btn__text{
+        color: var(--gs-green-color);
+      }
+      .gs-btn__icon{
+        background-color: var(--gs-green-color);
+      }
+      &:hover{
+        background-color: var(--gs-green-ghost-color);
+      }
+    }
+  }
+  &.btn-reject{
+    border: 1px solid var(--gs-red-color);
+    background-color: var(--gs-red-color);
+    .gs-btn__text{
+      color: var(--gs-text-contrast);
+    }
+    .gs-btn__icon{
+      background-color: var(--gs-text-contrast);
+    }
+    &:hover{
+      background-color: var(--gs-red-hover-color);
+    }
+    &.btn-ghost{
+      background-color: var(--gs-object-bg);
+      .gs-btn__text{
+        color: var(--gs-red-color);
+      }
+      .gs-btn__icon{
+        background-color: var(--gs-red-color);
+      }
+      &:hover{
+        background-color: var(--gs-red-ghost-color);
+      }
+    }
+  }
+  &.disable,&[disable],&:disabled{
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+  }
+}
