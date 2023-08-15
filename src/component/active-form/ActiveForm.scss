@@ -69,45 +69,403 @@
     }
   }
   &__content{
+    width: 100%;
+    position: relative;
+    padding-bottom: 12px;
+    &__form{
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      margin-bottom: 32px;
+      &__date{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding-right: 32px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        &__label{
+          display: inline-block;
+          color: var(--gs-text-def);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px; /* 122.222% */
+          margin-right: 12px;
+        }
+      }
+      &__check-box-group{
+        position: relative;
+        flex-shrink: 0;
+        flex-grow: 1;
+      }
+    }
+    &__list{
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      &__user{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &__filter{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          padding-right: 14px;
+          margin-bottom: 16px;
+        }
+        &__grid{
+          width: 100%;
+          position: relative;
+          height: 220px;
+          overflow: auto;
+        }
+      }
+      &__selected{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &__control{
+          width: 72px;
+          flex-shrink: 0;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          padding-top: 32px;
+          .gs-btn{
+            margin-bottom: 16px;
+            &-revers{
+              .gs-btn__icon{
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+        &__grid{
+          width: calc(100% - 72px);
+          position: relative;
+          height: 220px;
+          overflow: auto
+        }
+      }
+    }
     &__col{
-      &-first{}
-      &-second{}
+      &-first{
+        width: calc(50% - 72px);
+        flex-shrink: 0;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding-right: 18px;
+        .gs-mod-textarea{
+          padding-right: 14px;
+        }
+      }
+      &-second{
+        width: calc(50% + 72px);
+        flex-shrink: 0;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+      }
     }
   }
-  &__footer{}
-}
-.gs-mod-calendar{
-  .MuiFormControl-root{
-    margin: 6px;
-    .MuiInputBase-root{
-      height: 40px;
-      .MuiOutlinedInput-notchedOutline{
-        border-color: var(--main-border-color);
+  &__footer{
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid var(--main-border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    &__btn-group{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+    .gs-btn{
+      margin-left: 16px;
+      margin-bottom: 16px;
+      &-icon-revers{
+        padding-left: 24px;
+        padding-right: 12px;
+        .gs-btn__icon{
+          margin-right: 0;
+          margin-left: 8px;
+          transform: rotate(180deg);
+        }
       }
-      .MuiInputBase-input{
-        color: var(--gs-text-def);
-        border: none!important;
+    }
+  }
+  .gs-mod-search{
+    margin-right: 32px;
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-width: 50%;
+    &:before{
+      position: absolute;
+      z-index: 1;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      background-color: var(--gs-text-light);
+    }
+    input{
+      width: 100%;
+      position: relative;
+      border-radius: 8px;
+      border: 1px solid var(--main-border-color);
+      height: 40px;
+      line-height: 38px;
+      color: var(--gs-text-def);
+      font-family: "Golos text";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      padding: 0 16px 0 56px;
+      background-color: var(--gs-object-bg);
+      &::placeholder{
+        color: var(--gs-text-light);
+      }
+      outline: none;
+      box-shadow: none;
+      &:hover,&:focus{
         outline: none;
-        &:hover,&:focus{
+        box-shadow: none;
+        border: 1px solid var(--gs-acent-color)!important;
+      }
+    }
+  }
+  .gs-mod-calendar{
+    .MuiFormControl-root{
+      .MuiInputBase-root{
+        height: 40px;
+        .MuiOutlinedInput-notchedOutline{
+          border-color: var(--main-border-color);
+        }
+        .MuiInputBase-input{
+          color: var(--gs-text-def);
           border: none!important;
+          outline: none;
+          &:hover,&:focus{
+            border: none!important;
+            outline: none;
+          }
+        }
+      }
+      .MuiFormLabel-root{
+        transform: translate(14px, 10px) scale(1);
+        color: var(--gs-text-def);
+        &.Mui-focused,&.MuiInputLabel-shrink{
+          transform: translate(14px, -9px) scale(0.75);
+        }
+      }
+      .MuiButtonBase-root{
+        outline: none;
+        .MuiSvgIcon-root{
+          fill: var(--gs-text-light);
+        }
+        &:focus,&:hover{
           outline: none;
         }
       }
     }
-    .MuiFormLabel-root{
-      transform: translate(14px, 10px) scale(1);
+  }
+  .gs-mod-textarea{
+    width: 100%;
+    position: relative;
+    textarea{
+      font-family: "Golos text";
+      width: 100%;
+      height: 96px;
+      resize: none;
+      border-radius: 8px;
+      border: 1px solid var(--main-border-color);
+      background: var(--gs-object-bg);
       color: var(--gs-text-def);
-      &.Mui-focused,&.MuiInputLabel-shrink{
-        transform: translate(14px, -9px) scale(0.75);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 112.5% */
+      padding: 14px 16px;
+      &::placeholder{
+        color: var(--gs-text-light);
       }
-    }
-    .MuiButtonBase-root{
       outline: none;
-      .MuiSvgIcon-root{
-        fill: var(--gs-text-light);
-      }
+      box-shadow: none;
       &:focus,&:hover{
         outline: none;
+        box-shadow: none;
+        border: 1px solid var(--gs-acent-color);
+      }
+    }
+  }
+  .gs-mod-select{
+    position: relative;
+    background: var(--filter-check-box-bg);
+    height: 40px;
+    .MuiFormControl-root{
+      position: relative;
+      background: var(--filter-check-box-bg, #FDFDFD);
+      height: 40px;
+      width: 290px;
+    }
+    .gs-select-text{
+      color: var(--filter-text-color, #393E47);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      &.gs-placeholder{
+        color: var(--gs-text-light);
+      }
+    }
+    .gs-icon{
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: middle;
+      background-color: var(--gs-text-def);
+    }
+    .MuiOutlinedInput-notchedOutline{
+      display: none;
+    }
+    .MuiInputBase-root{
+      height: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--main-border-color, #DADCE2);
+      &.Mui-focused{
+        border: 1px solid var(--filter-check-box-checked, #4C98E3);
+      }
+    }
+    .MuiSelect-select{
+      padding: 0 12px;
+      line-height: 40px;
+      height: 100%;
+      position: relative;
+      &:before{
+        content: "";
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        width: 16px;
+        height: 16px;
+        -webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icons"><path id="Icon" d="M12 10L8 6L4 10" stroke="%23393E47" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg> ');
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        background-color: var(--gs-text-def);
+      }
+      &[aria-expanded="true"]{
+        &:before{
+          transform: translateY(-50%) rotate(0);
+        }
+      }
+    }
+    .MuiSvgIcon-root{
+      display: none;
+    }
+  }
+  .gs-mod-grid{
+    width: 100%;
+    position: relative;
+    tr{
+      background-color: var(--gs-object-bg);
+      cursor: pointer;
+      &:hover{
+        background-color: var(--gs-acent-ghost-color);
+      }
+      td{
+        background-color: transparent;
+        white-space: nowrap;
+        height: 36px;
+        line-height: 36px;
+        padding-left: 16px;
+        padding-right: 8px;
+        position: relative;
+        color: var(--gs-text-def);
+        vertical-align: middle;
+        font-family: 'Golos Text';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:first-child{
+          padding-left: 4px;
+        }
+        &:last-child{
+          padding-right: 4px;
+        }
+      }
+      &.gs-mod-grid__header{
+        cursor: default;
+        position: sticky;
+        left: 0;
+        top: 0;
+        background-color: var(--gs-object-bg);
+        z-index: 1;
+        &:hover{
+          background-color: var(--gs-object-bg);
+        }
+        td{
+          height: 32px;
+          line-height: 32px;
+          color: var(--gs-text-light);
+          border-bottom: 1px solid var(--main-border-color);
+          &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 20px;
+            background-color: var(--main-border-color);
+            left: 0;
+            top: 6px;
+          }
+          &:first-child{
+            &:before{
+              display: none;
+            }
+          }
+        }
       }
     }
   }

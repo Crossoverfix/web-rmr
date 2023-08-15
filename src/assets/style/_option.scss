@@ -2,20 +2,36 @@
   box-sizing: border-box;
   overflow: auto;
   &::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
   }
   &::-webkit-scrollbar-thumb {
     width: 6px;
     height: 6px;
-    margin: 2px;
     border: none;
     border-radius: 3px;
     background-color: #E4E6E7;
     outline: none;
   }
-  &::-webkit-scrollbar-track{
-    width: 10px;
-    height: 10px;
+  &::-webkit-scrollbar-track{}
+}
+body{
+  input:focus, textarea:focus{
+    border: none!important;
+  }
+  .MuiPaper-root.MuiPaper-elevation{
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 6px;
+      height: 6px;
+      border: none;
+      border-radius: 3px;
+      background-color: #E4E6E7;
+      outline: none;
+    }
+    &::-webkit-scrollbar-track{}
   }
 }
