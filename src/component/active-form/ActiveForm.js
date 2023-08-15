@@ -38,12 +38,24 @@ function ActiveForm (){
                         </div>
                     </div>
                     <div className="gs-aform__content__col-second">
-                        <div className="gs-aform__content__form__date">
-                            <span className="gs-aform__content__form__date__label">Срок</span>
-                            <div className="gs-mod-calendar">
-                                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                    <DatePicker className="gs-select-period__picker"/>
-                                </LocalizationProvider>
+                        <div className="gs-aform__content__form__check-field-group">
+                            <div className="gs-aform__content__form__date">
+                                <span className="gs-aform__content__form__date__label">Срок</span>
+                                <div className="gs-mod-calendar">
+                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                        <DatePicker className="gs-select-period__picker"/>
+                                    </LocalizationProvider>
+                                </div>
+                            </div>
+                            <div className="gs-mod-select">
+                                <FormControl >
+                                    <Select defaultValue={0}>
+                                        <MenuItem value={0}><span className="gs-select-text gs-placeholder">Контролер</span></MenuItem>
+                                        <MenuItem value={1}><span className="gs-select-text">Адамчук С.А.</span></MenuItem>
+                                        <MenuItem value={2}><span className="gs-select-text">Адамчук С.А.</span></MenuItem>
+                                        <MenuItem value={3}><span className="gs-select-text">Адамчук С.А.</span></MenuItem>
+                                    </Select>
+                                </FormControl>
                             </div>
                         </div>
                         <div className="gs-aform__content__form__check-box-group">
@@ -130,7 +142,7 @@ function ActiveForm (){
                             </div>
                         </div>
                     </div>
-                    <div className="gs-aform__content__col-first">
+                    <div className="gs-aform__content__col-second">
                         <div className="gs-aform__content__list__selected">
                             <div className="gs-aform__content__list__selected__control">
                                 <button className="gs-btn btn-icon btn-def btn-ghost gs-btn-revers">
@@ -143,56 +155,70 @@ function ActiveForm (){
                             <div className="gs-aform__content__list__selected__grid gs-scroll-slim">
                                 <table className="gs-mod-grid" cellSpacing="0" border="0">
                                     <tr className="gs-mod-grid__header">
+                                        <td></td>
                                         <td>Выбрать ответственного</td>
                                         <td>Должность</td>
                                         <td>Подразделение</td>
                                     </tr>
                                     <tr>
+                                        <td><label className="selected-radio">
+                                            <input type="radio" name="selected-user" value="1"/>
+                                            <div className="selected-radio__label"></div>
+                                        </label></td>
                                         <td>Адамчук С.А.</td>
                                         <td>директор</td>
                                         <td>Департамент обеспечения деятельности</td>
                                     </tr>
                                     <tr>
+                                        <td><label className="selected-radio">
+                                            <input type="radio" name="selected-user" value="2"/>
+                                            <div className="selected-radio__label"></div>
+                                        </label></td>
                                         <td>Адамчук С.А.</td>
                                         <td>директор</td>
                                         <td>Департамент обеспечения деятельности</td>
                                     </tr>
                                     <tr>
+                                        <td><label className="selected-radio">
+                                            <input type="radio" name="selected-user" value="3"/>
+                                            <div className="selected-radio__label"></div>
+                                        </label></td>
                                         <td>Адамчук С.А.</td>
                                         <td>директор</td>
                                         <td>Департамент обеспечения деятельности</td>
                                     </tr>
                                     <tr>
+                                        <td><label className="selected-radio">
+                                            <input type="radio" name="selected-user" value="4"/>
+                                            <div className="selected-radio__label"></div>
+                                        </label></td>
                                         <td>Адамчук С.А.</td>
                                         <td>директор</td>
                                         <td>Департамент обеспечения деятельности</td>
                                     </tr>
                                     <tr>
+                                        <td><label className="selected-radio">
+                                            <input type="radio" name="selected-user" value="4"/>
+                                            <div className="selected-radio__label"></div>
+                                        </label></td>
                                         <td>Адамчук С.А.</td>
                                         <td>директор</td>
                                         <td>Департамент обеспечения деятельности</td>
                                     </tr>
                                     <tr>
+                                        <td><label className="selected-radio">
+                                            <input type="radio" name="selected-user" value="4"/>
+                                            <div className="selected-radio__label"></div>
+                                        </label></td>
                                         <td>Адамчук С.А.</td>
                                         <td>директор</td>
                                         <td>Департамент обеспечения деятельности</td>
                                     </tr>
                                     <tr>
-                                        <td>Адамчук С.А.</td>
-                                        <td>директор</td>
-                                        <td>Департамент обеспечения деятельности</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Адамчук С.А.</td>
-                                        <td>директор</td>
-                                        <td>Департамент обеспечения деятельности</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Адамчук С.А.</td>
-                                        <td>директор</td>
-                                        <td>Департамент обеспечения деятельности</td>
-                                    </tr>
-                                    <tr>
+                                        <td><label className="selected-radio">
+                                            <input type="radio" name="selected-user" value="4"/>
+                                            <div className="selected-radio__label"></div>
+                                        </label></td>
                                         <td>Адамчук С.А.</td>
                                         <td>директор</td>
                                         <td>Департамент обеспечения деятельности</td>
