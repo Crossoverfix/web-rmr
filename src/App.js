@@ -67,6 +67,9 @@ function App() {
             </div>
 </div>
     <div className="gs-frame__content">
+        <List />
+        <Search />
+        <Grid />
         <div className="gs-test-btn">
             <button className="gs-btn">
                 <span className="gs-btn__icon icon__search-add--mask"></span>
@@ -264,9 +267,6 @@ function App() {
 
 
         </div>
-        {/*<List />*/}
-        {/*<Search />*/}
-        {/*<Grid />*/}
     </div>
 </div>
             {/*<Filter></Filter>*/}

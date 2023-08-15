@@ -1,0 +1,114 @@
+.gs-aform{
+  width: 100%;
+  position: relative;
+  padding-top: 16px;
+  &__tabs{
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--main-border-color);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    &__labels{
+      position: relative;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      top: 1px;
+      padding: 0 16px;
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      &:hover{
+        border-bottom: 3px solid var(--gs-text-light);
+      }
+      &__title{
+        display: inline-block;
+        flex-shrink: 0;
+        color: var(--gs-text-light);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 112.5% */
+      }
+      &__counter{
+        display: inline-block;
+        flex-shrink: 0;
+        margin-left: 8px;
+        padding: 0 6px;
+        color: var(--gs-text-light);
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 112.5% */
+        border-radius: 6px;
+        background: var(--gs-grey);
+      }
+      &.disable{
+        opacity: 0.5;
+        &:hover{
+          border-bottom: 3px solid transparent;
+        }
+      }
+      &.active{
+        border-bottom: 3px solid var(--gs-text-def);
+        &:hover{
+          border-bottom: 3px solid var(--gs-text-def);
+        }
+        .gs-aform__tabs__labels__title{
+          color: var(--gs-text-def);
+
+        }
+      }
+    }
+  }
+  &__content{
+    &__col{
+      &-first{}
+      &-second{}
+    }
+  }
+  &__footer{}
+}
+.gs-mod-calendar{
+  .MuiFormControl-root{
+    margin: 6px;
+    .MuiInputBase-root{
+      height: 40px;
+      .MuiOutlinedInput-notchedOutline{
+        border-color: var(--main-border-color);
+      }
+      .MuiInputBase-input{
+        color: var(--gs-text-def);
+        border: none!important;
+        outline: none;
+        &:hover,&:focus{
+          border: none!important;
+          outline: none;
+        }
+      }
+    }
+    .MuiFormLabel-root{
+      transform: translate(14px, 10px) scale(1);
+      color: var(--gs-text-def);
+      &.Mui-focused,&.MuiInputLabel-shrink{
+        transform: translate(14px, -9px) scale(0.75);
+      }
+    }
+    .MuiButtonBase-root{
+      outline: none;
+      .MuiSvgIcon-root{
+        fill: var(--gs-text-light);
+      }
+      &:focus,&:hover{
+        outline: none;
+      }
+    }
+  }
+}

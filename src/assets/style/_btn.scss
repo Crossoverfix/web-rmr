@@ -5,6 +5,8 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   height: 48px;
+  min-width: 48px;
+  flex-shrink: 0;
   padding: 0 24px 0 12px;
   position: relative;
   cursor: pointer;
@@ -37,13 +39,25 @@
     flex-shrink: 0;
     display: inline-block;
   }
-  &.btn-icon{
+  &.btn-icon,&.btn-icon-small{
     padding: 0 12px;
+    width: 48px;
     .gs-btn__text{
       display: none;
     }
     .gs-btn__icon{
       margin-right: 0;
+    }
+  }
+  &.btn-icon-small{
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 11px;
+    .gs-btn__icon{
+      margin-right: 0;
+      width: 18px;
+      height: 18px;
     }
   }
   &.btn-text{
@@ -60,6 +74,12 @@
     }
     .gs-btn__icon{
       background-color: var(--gs-text-contrast);
+      &[class$='--before--mask']{
+        background-color: transparent;
+        &:before{
+          background-color: var(--gs-text-contrast);
+        }
+      }
     }
     &:hover{
       background-color: var(--gs-acent-hover-color);
@@ -71,6 +91,12 @@
       }
       .gs-btn__icon{
         background-color: var(--gs-acent-color);
+        &[class$='--before--mask']{
+          background-color: transparent;
+          &:before{
+            background-color: var(--gs-acent-color);
+          }
+        }
       }
       &:hover{
         background-color: var(--gs-acent-ghost-color);
@@ -85,6 +111,12 @@
     }
     .gs-btn__icon{
       background-color: var(--gs-text-contrast);
+      &[class$='--before--mask']{
+        background-color: transparent;
+        &:before{
+          background-color: var(--gs-text-contrast);
+        }
+      }
     }
     &:hover{
       background-color: var(--gs-green-hover-color);
@@ -96,6 +128,12 @@
       }
       .gs-btn__icon{
         background-color: var(--gs-green-color);
+        &[class$='--before--mask']{
+          background-color: transparent;
+          &:before{
+            background-color: var(--gs-green-color);
+          }
+        }
       }
       &:hover{
         background-color: var(--gs-green-ghost-color);
@@ -110,6 +148,12 @@
     }
     .gs-btn__icon{
       background-color: var(--gs-text-contrast);
+      &[class$='--before--mask']{
+        background-color: transparent;
+        &:before{
+          background-color: var(--gs-text-contrast);
+        }
+      }
     }
     &:hover{
       background-color: var(--gs-red-hover-color);
@@ -121,6 +165,12 @@
       }
       .gs-btn__icon{
         background-color: var(--gs-red-color);
+        &[class$='--before--mask']{
+          background-color: transparent;
+          &:before{
+            background-color: var(--gs-red-color);
+          }
+        }
       }
       &:hover{
         background-color: var(--gs-red-ghost-color);
@@ -131,5 +181,13 @@
     opacity: 0.5;
     pointer-events: none;
     user-select: none;
+  }
+  &__icon{
+    &[class$='--before--mask']{
+      background-color: transparent;
+      &:before{
+        background-color: var(--gs-text-def);
+      }
+    }
   }
 }

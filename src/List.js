@@ -3,12 +3,13 @@ import {FormControl, MenuItem, Select} from "@mui/material";
 import ActiveFilter from "./component/active-filter/Active-filter";
 import TabsTag from "./component/tabs-tag/TabsTag";
 import View from "./component/view/View";
+import Header from "./component/header/Header";
+import ActiveForm from "./component/active-form/ActiveForm";
 
 
 function List() {
     let boolFalse = false;
     let testLink = "#"
-    let testLink2 = "#"
     const filterData = [
         {type: 'ratio', name: 'Срок исполнения', value: 'Просрочено'},
         {type: 'ratio', name: 'Период отображения', value: 'Последний месяц'},
@@ -28,54 +29,8 @@ function List() {
     ];
     return (
         <div className="gs-frame__list">
-            <div className="gs-frame__list__header">
-                <div className="gs-frame__list__header__breadcrumb">
-                    <ul className="gs-breadcrumb">
-                        <li><a href={testLink2}>Почта</a></li>
-                        <li><span>Подписать</span></li>
-                    </ul>
-                </div>
-                <div className="gs-frame__list__header__control">
-                    <div className="gs-frame__list__header__control__page">
-                        <div className="gs-page-control">
-                            <a href={testLink} className="gs-page-control__back-link icon__back-link">back</a>
-                            <span className="gs-page-control__title">Подписать</span>
-                            <span className="gs-page-control__count">30</span>
-                            <span className="gs-page-control__description">(Законопроекты, НПА, резолюции, протоколы, письма)</span>
-                            <span className="gs-page-control__date">Текущая дата: 22.05.2023</span>
-                        </div>
-                    </div>
-                    {boolFalse && <>
-                        <div className="gs-frame__list__header__control__content">
-                            <div className="gs-content-control">
-                                <div className="gs-content-control__filter">
-                                    <div className="gs-content-control__filter__sort">
-                                        <FormControl className="gs-mui-select">
-                                            <Select
-                                                defaultValue={1}
-                                            >
-                                                <MenuItem value={1}><span className="gs-select-text">Сначала непрочитанные</span></MenuItem>
-                                                <MenuItem value={2}><span className="gs-select-text">Сначала прочитанные</span></MenuItem>
-                                                <MenuItem value={3}><div className="gs-icon icon__sort-up"></div><span className="gs-select-text">По дате поступления</span></MenuItem>
-                                                <MenuItem value={4}><div className="gs-icon icon__sort-down"></div><span className="gs-select-text">По дате поступления</span></MenuItem>
-                                            </Select>
-                                        </FormControl>
-                                    </div>
-                                </div>
-                                <ActiveFilter data={filterData}></ActiveFilter>
-                                <div className="gs-content-control__action">
-                                    <button className="gs-content-control__action__btn">
-                                        <span>Выбрать документы</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="gs-frame__list__header__control__tabs">
-                            <TabsTag data={tagTabList}></TabsTag>
-                        </div>
-                    </>}
-                </div>
-            </div>
+            <Header></Header>
+            <ActiveForm></ActiveForm>
             <View data={testLink}></View>
             {boolFalse &&  <div className="gs-frame__list__content">
                 <div className="gs-list-card">
